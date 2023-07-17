@@ -6,7 +6,7 @@ module.exports=()=>{
     useUnifiedTopology:true,
     };
     try{
-        mongooose.connect("mongodb+srv://bagheleshivam2002:bagheleshivam@cluster0.re3pjch.mongodb.net/?retryWrites=true&w=majority", connectionParams);
+        mongooose.connect(process.env.DB, connectionParams);
         console.log("Connected to database successfully|");
     }catch(error)
     {
@@ -14,4 +14,3 @@ module.exports=()=>{
         console.log("couldnt connect to DB");
     }
 }
-//process.env.DB
